@@ -1,0 +1,27 @@
+body {
+    background-color:aquamarine;
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    display: inline-block;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 24px;
+}
+
+.input-fields {
+    float: left;
+    margin-left: 150px;
+}
+
+.category-fields {
+    float: right;
+    margin-right: 150px;
+}
