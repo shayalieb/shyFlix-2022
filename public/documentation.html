@@ -10,29 +10,110 @@
 <body>
     <h1 class="about-header">Shaya's Movie database and API</h1>
     <p class="about-site">
-        Shaya Lieberman created this application which enables you to store and manage all the things that you love about movies. You can creat your database and filter it by mame, genre, actors, year, and much more. This allows you to keep track of all your favorites like what you already watched, what do you wanna watch, and much more!
+        Shaya Lieberman created this application that enables you to store and manage all the things that you love about movies. You can create your database and filter it by name, genre, actors, year, and much more. This allows you to keep track of all your favorites like what you already watched, what you wanna watch, and much more!
     </p>
     <div class="input-fields">
-    <h2>Input fields to include in the development process</h2>
+    <h3>Input fields to include in the development process</h3>
     <ul>
-        <li>First name</li>
-        <li>Last name</li>
-        <li>Date of birth</li>
-        <li>Email address</li>
+        <li>id</li>
+        <li>Name</li>
+        <li>favoriteMovies</li>
     </ul>
 </div>
 <div class="category-fields">
-    <h2>Categories to include for filtering</h2>
+    <h3>Categories to include for movies</h3>
     <ul>
-        <li>Movie name</li>
-        <li>Year released</li>
-        <li>Category</li>
-        <li>Actors</li>
-        <li>Check-box if watched</li>
-        <li>To watch</li>
-        <li>Check-box if favorite movie</li>
+        <li>Title</li>
+        <li>Description</li>
+        <li>Genre: Name, Description</li>
+        <li>Director: Name, Bio, Birth</li>
+        <li>ImageUrl</li>
     </ul>
 </div>
+
+<table>
+    <thead>
+    <th>Logic</th>
+    <th>Endpoint URL</th>
+    <th>Request type</th>
+    <th>Response</th>
+</thead>
+<tbody>
+<tr>
+    <td>Return a JSON of the movie names</td>
+    <td>/movies/:title</td>
+    <td>GET</td>
+    <td>JSON</td>
+</tr>
+<tr>
+    <td>Return all movies</td>
+    <td>/movies</td>
+    <td>GET</td>
+    <td>JSON</td>
+</tr>
+<tr>
+    <td>Return a JSON with movie title </td>
+    <td>/movies/:title </td>
+    <td>GET</td>
+    <td>JSON</td>
+</tr>
+<tr>
+    <td>Return JSON with genre info</td>
+    <td>/movies/genre/:genreName </td>
+    <td>GET</td>
+    <td>JSON</td>
+</tr>
+<tr>
+    <td>Return JSON with director info</td>
+    <td>/movies/:movieInfo</td>
+    <td>GET</td>
+    <td>JSON</td>
+</tr>
+<tr>
+    <td>Add a new user to shyFlix using JSON</td>
+    <td>/movies/directors/:directorName</td>
+    <td>GET</td>
+    <td>JSON</td>
+</tr>
+<tr>
+    <td>Add new user</td>
+    <td>/users</td>
+    <td>POST</td>
+    <td>201</td>
+</tr>
+<tr>
+    <td>Update user</td>
+    <td>/users/:id</td>
+    <td>PUT</td>
+    <td>201</td>
+</tr>
+<tr>
+    <td>Delete a movie from a user</td>
+    <td>/users/:id/:movies</td>
+    <td>DELETE</td>
+    <td>201</td>
+</tr>
+<tr>
+    <td>Add favoriteMovies to a user</td>
+    <td>/users/:id/:movieTitle</td>
+    <td>POST</td>
+    <td>201</td>
+</tr>
+<tr>
+    <td>Delete movies from Favorite movies</td>
+    <td>/users/:id/:movieTitle</td>
+    <td>Delete</td>
+    <td>201</td>
+</tr>
+<tr>
+    <td>Delete a user</td>
+    <td>/users/:id</td>
+    <td>Delete</td>
+    <td>201</td>
+</tr>
+</tbody>
+</table>
+
     <script type="module" src="main.js"></script>
 </body>
 </html>
